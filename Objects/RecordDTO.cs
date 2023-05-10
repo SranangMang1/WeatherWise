@@ -1,10 +1,9 @@
-﻿namespace WeatherWise.Objects
+﻿namespace WeatherWise.Objects;
+
+public class RecordDTO
 {
-    public class RecordDTO
-    {
-        public int Id { get; set; }
-        public int Temprature { get; set; }
-        public int LocationId { get; set; }
-        public int WeatherDescriptionId { get; set; }
-    }
+    public int Id { get; set; }
+    public int Temprature { get; set; }
+    public int LocationId { get; set; }
+    public int WeatherDescriptionId { get; set; }
 }
