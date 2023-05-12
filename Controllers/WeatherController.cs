@@ -12,12 +12,11 @@ namespace WeatherWise.Controllers
         public IEnumerable<RecordDTO> Get()
 
         {
-            
             return Enumerable.Range(1, 5).Select(index => new RecordDTO()).ToArray();
 
         }
 
-      
+        
         [HttpGet("{id}")]
         public RecordDTO GetRecordDTOById(int id)
         {
@@ -38,4 +37,4 @@ namespace WeatherWise.Controllers
 
 }
 
-    
+
