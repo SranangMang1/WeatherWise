@@ -19,7 +19,16 @@ namespace WeatherWise
             builder.Entity<Degrees>();
         }
 
-        
+        public class WeatherContextDb : IDesignTimeDbContextFactory<WeatherContext>
+        {
+            public WeatherContext CreateDbContext(string[] args)
+            {
+                var builder = new DbContextOptionsBuilder<WeatherContext>();
+                var connectionString = "Server= ;Database= ;Trusted_Connection=True;TrustServerCertificate=True";
+                builder.UseSqlServer(connectionString);
+                return new WeatherContext(builder.Options);
+            }
+        }
 
     }
 }
