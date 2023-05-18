@@ -26,17 +26,7 @@ namespace WeatherWise
 
         }
 
-        public static IServiceCollection RegisterServices(this IServiceCollection services, IConfiguration configuration)
-        {
-            var appSettings = configuration.GetSection("appsetting");
-            var settings = appSettings.Get<ApplicationSettings>();
-
-            services.AddLocalization();
-            services.AddWeatherDbContextFactory(services, configuration, true);
-
-            return services;
-
-        }
+       
 
         public static IServiceCollection RegisterLocalization(this IServiceCollection services)
         {
